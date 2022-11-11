@@ -62,7 +62,7 @@ function Wether() {
                             const newDate = new Date(data.dt_txt);
                             allData[i] = {
                                 fullDate: newDate.toDateString().slice(0, 10),
-                                description: data.weather[0].description,
+                                description: data.weather[0].description.toUpperCase(),
                                 myIcon: data.weather[0].icon + '.png',
                                 temp: Math.round(data.main.temp) + '°',
                                 hour: `${newDate.getHours()}`,
@@ -96,6 +96,9 @@ function Wether() {
     if (currentD.currentDescription == 'Clouds') {
         animatIcon = 'CLOUDY'
     }
+    if (currentD.currentDescription == 'Mist') {
+        animatIcon = 'FOG'
+    }
 
     if (currentD.currentDescription == 'Clear') {
         if (hour > 19) {
@@ -116,7 +119,6 @@ function Wether() {
         size: 98,
         animate: true
     };
-
 
     return (
         <>
