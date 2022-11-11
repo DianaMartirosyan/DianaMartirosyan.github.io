@@ -90,8 +90,8 @@
      } 
  }
 
- @media screen and (max-width: 590px) {
-    .block{
+ /* @media screen and (max-width: 590px) { */
+    /* .block{
         padding: 0 5px;
         width: min-content;
         font-size: 12px;
@@ -99,10 +99,10 @@
     .inputGroups {
         width: 90%;
     }
- }
+ } */
   
  
- @media screen and (max-width: 350px) {
+ @media screen and (max-width: 590px) {
     .section {
         height:  320vh;
     }
@@ -132,6 +132,9 @@
     .block{
         padding: 0 5px;
         font-size: 22px; 
+    } 
+    .block img{
+        display: none;
     } 
 }
    
