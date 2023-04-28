@@ -17,15 +17,15 @@ function Wether() {
     let [imgSrc, setImgSrc] = useState();
     let [cards, setCards] = useState();
     let [show, setShow] = useState(false)
-    let [allData, setAllData] = useState([])
+    let [allData, setAllData] = useState([]);
+
+    let animatIcon = '';
+    let colorIcon = '';
     let target = useRef(null);
 
-    let animatIcon = ''
-    let colorIcon = ''
 
     let handleChange = (e) => {
         setInputValue(e.target.value)
-
     };
 
 
@@ -140,7 +140,7 @@ function Wether() {
                             onClick={() => handleClick(inputValue)}
 
                         >
-                            <SearchIcon />
+                            <SearchIcon className={styles.search_icon} />
                         </Button>
                     </InputGroup>
                 </div>
